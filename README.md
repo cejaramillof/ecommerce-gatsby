@@ -53,3 +53,22 @@ Node (react + graphql + webpack) -> Genera 1 sitio estático (multiples html y j
 - `npm i -S -E styled-components react-helmet prop-types gatsby-transformer-sharp gatsby-source-filesystem gatsby-plugin-sharp gatsby-plugin-react-helmet gatsby-plugin-offline gatsby-plugin-manifest gatsby-image`
 - create `gatsby-config.js`
 - create base commands `package.json`
+
+**gatsby-config.js**
+Project info, metadata, and plugins config
+
+**gatsby-browser.js**
+APIs o métodos predefinidos para ejecutarse en el browser, ej: para añadir vistas, librerías, contextapi, redux, googlemaps.
+
+**gatsby-node.js**
+Configurasión de construcción sitio web con Gatsby.Generar vistas en función de información proveniente de GraphQL, o APIs externas. (Generando nuestos propios plugins de fuentes de datos)
+
+## Plugins
+## Plugins como Componentes:
+Cuando instalamos el plugin obtenemos un componente que debemos integrar a nuestra aplicación para obtener algún beneficio.
+
+## Plugins como Funcionalidades:
+Nos ayudan a transformar información o implementar una funcionalidad en concreto. Por ejemplo: gatsby-image nos ayuda a crear nuevas versiones de nuestras imágenes con menor calidad para mejorar la carga inicial de nuestro sitio web.
+
+## Plugins como Fuente de Datos:
+Estos plugins utilizan Node.js y GraphQL para consumir la información de algún lugar o herramienta como Firebase, WordPress, APIs Rest, entre otras.

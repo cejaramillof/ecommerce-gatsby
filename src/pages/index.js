@@ -1,10 +1,17 @@
-// rfc and tab
-import React from 'react'
+import React from "react"
+import { Link } from "gatsby"
+import { SEO, Jumbo } from "../components"
 
-export default function index() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  )
-}
+const IndexPage = () => (
+  <>
+    <SEO title="Home" />
+    <Jumbo />
+    <h1>Hi people</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <p>Now go build something great.</p>
+    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/gracias/">Go to page gracias</Link>
+  </>
+)
+
+export default IndexPage
