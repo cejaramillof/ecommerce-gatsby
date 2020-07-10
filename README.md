@@ -47,3 +47,9 @@ Node (react + graphql + webpack) -> Genera 1 sitio estático (multiples html y j
 **eslint**
 `npm i -D -E eslint`
 `npx eslint --init` `./node_modules/.bin/eslint --init`
+
+
+# Config
+- `npm i -S -E styled-components react-helmet prop-types gatsby-transformer-sharp gatsby-source-filesystem gatsby-plugin-sharp gatsby-plugin-react-helmet gatsby-plugin-offline gatsby-plugin-manifest gatsby-image`
+- create `gatsby-config.js`
+- create base commands `package.json`
