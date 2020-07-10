@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce-gatsby",
+  "version": "1.0.0",
+  "description": "# ¿Qué es Gatsby? Gatsby es un framework open source increíblemente rápido, Trabaja con un stack innovador, ya que integra tecnologías como React y GraphQL con diferentes fuentes de información como WordPress o Sanity.io. Su velocidad se debe a que compila la aplicación mientras desarrollamos para que el sitio en producción obtenga todos los beneficios de las Single Page Applications y el Server Side Rendering.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "gatsby develop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.24.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6"
+  }
+}
