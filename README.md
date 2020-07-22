@@ -72,3 +72,66 @@ Nos ayudan a transformar información o implementar una funcionalidad en concret
 
 ## Plugins como Fuente de Datos:
 Estos plugins utilizan Node.js y GraphQL para consumir la información de algún lugar o herramienta como Firebase, WordPress, APIs Rest, entre otras.
+
+# GraphQL
+GraphQL es un lenguaje tipado que facilita la comunicación entre servicios, pero los datos de nuestra aplicación pueden venir de diferentes lugares, así que GraphQL no tiene forma de acceder a todos estos datos para que podamos consumirlos desde un mismo lugar.
+Gatsby recolecta toda la información de nuestra aplicación mientras desarrollamos en local y la almacena en un servidor de GraphQL. Luego, en la etapa de compilación, justo antes de pasar a producción, Gatsby guardará los datos de GraphQL junto al código, de esta forma los tendremos disponibles sin necesidad de hacer peticiones a las fuentes de datos originales.
+
+On develop can test queries on Graphql server called Graphiql (default) or playground
+Queries only can be executed on pages. or in other pages with *static query*
+
+```GraphQL
+query {
+  allFile {
+    totalCount
+  }
+}
+```
+
+## Al trabajar con plugins de fuentes de datos en gatsby:
+
+### Edges (conexiones)
+No podemos consumir la información de estos plugins de la misma forma que otras consultas de GraphQL. En estos casos, la propiedad edges nos hace referencia a la conexión directa entre estos plugins y el servidor de GraphQL.
+
+### Nodos (node or nodes)
+Son los elementos individuales de información que obtenemos al hacer una consulta con la propiedad edges.
+
+Por ejemplo: Para conseguir la información del nuestras imágenes (guardadas en la carpeta src/images) usamos el plugin gatsby-source-filesystem.
+
+En este caso podemos acceder a la información de nuestras imágenes con la siguiente consulta de GraphQL:
+
+```GraphQL
+query {
+  allFile {
+    edges {
+      node {
+         name
+         relativePath
+      }
+    }
+  }
+}
+```
+
+La propiedad relativePath es relativa a la propiedad path de nuestra configuración del plugin gatsby-source-filesystem en el archivo gatsby-config.js.
+
+Podemos acceder a la metadata que configuramos en el archivo gatsby-config.js ejecutando la siguiente consulta en GraphQL:
+
+```GraphQL
+query {
+  allSite {
+    edges {
+      node {
+        siteMetadata {
+          title
+          description
+          author
+        }
+      }
+    }
+  }
+}
+```
+
+
+`npm install dotenv gatsby-plugin-stripe gatsby-plugin-styled-components gatsby-plugin-typography gatsby-source-stripe prop-types react-typography typography`

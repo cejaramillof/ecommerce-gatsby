@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
 import { Content, Footer } from '../styles/components'
-import "./layout.css"
 
 const Layout = ({ children }) => (
   <>
